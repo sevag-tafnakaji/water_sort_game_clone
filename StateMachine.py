@@ -11,7 +11,8 @@ class gameStateMachine():
         self.states = [Tube(verbose) for _ in range(self.num_tubes)]
 
     def initialise_states(self):
-        self.print_states()
+        if self.verbose:
+            self.print_states()
 
         # create a list of lists with 4 colour each, then flatten it into a mega list
         initial_states = [colour for subcolour in [[colour] * 4 for colour in Colour] for colour in subcolour]
@@ -33,7 +34,8 @@ class gameStateMachine():
                 3: current_state[3]
             })
 
-        self.print_states()
+        if self.verbose:
+            self.print_states()
 
     def print_states(self):
         print("-----------------------")
@@ -68,7 +70,7 @@ class gameStateMachine():
             self.states[idx_1].print_tube()
             self.states[idx_2].print_tube()
 
+if __name__ == "__main__":
+    sm = gameStateMachine(verbose=False)
 
-sm = gameStateMachine(verbose=False)
-
-sm.initialise_states()
+    sm.initialise_states()

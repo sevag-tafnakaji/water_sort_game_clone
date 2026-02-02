@@ -8,12 +8,12 @@ class Colour(Enum):
     Blue = 2
     Green = 3
     Yellow = 4
-
-enum_to_colour = {
-    Colour.Red: 'red',
-    Colour.Blue: 'blue',
-    Colour.Green: 'yellow'
-}
+    Cyan = 5
+    Brown = 6
+    Orange = 7
+    Purple = 8
+    DarkGreen = 9
+    Gray = 10
 
 
 class Tube:

@@ -1,1 +1,2 @@
 termcolor  # Used to add colour formatting when printing states
+pygame
